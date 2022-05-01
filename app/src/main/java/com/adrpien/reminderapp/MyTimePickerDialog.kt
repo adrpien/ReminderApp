@@ -15,11 +15,13 @@ class MyTimePickerDialog: DialogFragment() {
         val hour = calendar.get(Calendar.HOUR)
         val minute = calendar.get(Calendar.MINUTE)
 
+        // Create TimePickerDialog object
+        // Get hour format form phone setting
         return TimePickerDialog(
             requireActivity(),
             activity as TimePickerDialog.OnTimeSetListener,
             hour,
             minute,
-            DateFormat.is24HourFormat(activity)
+            DateFormat.is24HourFormat(activity))
     }
 }
